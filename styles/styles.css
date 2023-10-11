@@ -1,8 +1,7 @@
 :root {
   box-sizing: border-box;
+  font-size: 16px;
 }
-
-
 
 @font-face {
   font-family: 'norsebold';
@@ -12,3 +11,9 @@
   font-style: normal;
 
 }
+
+
+/*
+Create Account Button: #596D48
+Input Default Border:  #E5E7EB
+*/
