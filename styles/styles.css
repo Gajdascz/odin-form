@@ -1,6 +1,9 @@
 :root {
   box-sizing: border-box;
   font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  font-family:'Times New Roman', Times, serif;
 }
 
 @font-face {
@@ -9,9 +12,11 @@
        url('norse-bold-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-
 }
 
+.form-container {
+
+}
 
 /*
 Create Account Button: #596D48
