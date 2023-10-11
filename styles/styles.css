@@ -2,18 +2,12 @@
   box-sizing: border-box;
   font-size: 16px;
   font-family:'Times New Roman', Times, serif;
+  --form-text-background-color: #f0f0f0;
+  --form-account-button-color: #596D48;
+  --input-default-border: 1px solid #E5E7EB;
+  --form-content-left-padding: 7%;
+  --form-content-right-padding: 12%;
 }
-
-em {
-  font-style: italic;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 @font-face {
   font-family: 'norsebold';
   src: url('norse-bold-webfont.woff2') format('woff2'),
@@ -22,32 +16,124 @@ body {
   font-style: normal;
 }
 
+em {
+  font-style: italic;
+}
+
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.form-header-container,
+.form-header-container + h2,
+.form-inputs-container,
+.form-buttons-container {
+  padding-left: var(--form-content-left-padding);
+  padding-right: var(--form-content-right-padding);
+}
+
+
 .signup-form {
   border: 5px solid purple;
   display: flex;
+  max-width: 100%;
 }
 
 .hero-container {
+  border: 5px solid hotpink;
   display: flex;
 }
 .hero-img {
-  max-width: auto;
-  max-height: 500px;
+  max-width: 100%;
+  height: auto;
 }
 
 
 .form-content-container {
   border: 5px solid orange;
+  background-color: var(--form-text-background-color);
 }
 .form-header-container {
-  background-color: #f0f0f0;
-  border: 5px solid green;
-  padding: 10% 5%;
+  border: 5px solid blue;
+  padding-top: 10%;
+  padding-bottom: 6%;
 }
 .form-header-text {
   font-weight: bold;
+  font-size: 1.5rem;
 }
-/*
-Create Account Button: #596D48
-Input Default Border:  #E5E7EB
-*/
+.inputs-header {
+  font-size: 2rem;
+  font-weight: 600;
+  background-color: white;
+}
+.form-inputs-container {
+  border: 5px solid green;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  padding-top: 2%;
+}
+label {
+  text-transform: uppercase;
+  font-size: .75rem;
+  padding-bottom: 15px;
+  margin: 12px;
+  display: flex;
+  flex-direction: column;
+}
+input {
+  padding: 8px;
+  width: 100%;
+}
+.form-inputs-left {
+  border: 5px solid gold;
+  display: flex;
+  flex-direction: column;
+  margin-right: 10%;
+  width: 40%;
+}
+
+.form-inputs-right {
+  border: 5px solid purple;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+
+.form-buttons-container {
+  border: 5px solid aqua;
+  display: flex;
+  flex-direction: column;
+  padding: 6%;
+}
+
+.form-buttons-container > button {
+  background-color: var(--form-account-button-color);
+  color: white;
+  width: 30%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 5%;
+  cursor: pointer;
+}
+.form-buttons-container > button:hover {
+  background-color: #1c2217;
+}
+
+
+.login-link {
+  color: var(--form-account-button-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+.login-link:hover {
+  color: #1c2217;
+}
