@@ -165,7 +165,25 @@ input {
   color: #1c2217;
 }
 
-.error {
-  color: red;
+input:invalid {
   border: 1px solid red;
+}
+
+.label-error {
+  color: red;
+}
+.label-match {
+  color: green;
+}
+.field-error {
+  border: 1px solid red;
+}
+.field-match{
+  border: 1px solid green;
+}
+.mismatch-error {
+  color: red;
+  margin-top: -5%;
+  margin-left: 2.5%;;
+  font-size: .75rem;
 }
