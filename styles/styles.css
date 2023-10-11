@@ -1,7 +1,7 @@
 :root {
   box-sizing: border-box;
   font-size: 16px;
-  font-family:'Times New Roman', Times, serif;
+  font-family: 'Times New Roman', Times, serif;
   --form-text-background-color: #f0f0f0;
   --form-account-button-color: #596D48;
   --input-default-border: 1px solid #E5E7EB;
@@ -10,8 +10,8 @@
 }
 @font-face {
   font-family: 'norsebold';
-  src: url('norse-bold-webfont.woff2') format('woff2'),
-       url('norse-bold-webfont.woff') format('woff');
+  src: url('/fonts/norse-bold-webfont.woff2') format('woff2'),
+       url('/fonts/norse-bold-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -39,27 +39,55 @@ body {
 
 
 .signup-form {
-  border: 5px solid purple;
   display: flex;
   max-width: 100%;
 }
 
 .hero-container {
-  border: 5px solid hotpink;
   display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
 }
 .hero-img {
   max-width: 100%;
-  height: auto;
+  height: 100%;
 }
+.odin-caption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  color: white;
+  font-family: 'norsebold';
+  font-size: 5rem;
+  background-color: rgba(0,0,0,.5);
+  text-align: center;
+  width: 100%;
+  top: 14%;
+}
+.hero-footer {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  font-family: 'norsebold';
+  background-color: rgba(0,0,0,.5);
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+}
+.hero-footer > span > a{ 
+  color: var(--form-account-button-color);
+  text-decoration: none;
+}
+
+
 
 
 .form-content-container {
-  border: 5px solid orange;
   background-color: var(--form-text-background-color);
 }
 .form-header-container {
-  border: 5px solid blue;
   padding-top: 10%;
   padding-bottom: 6%;
 }
@@ -71,9 +99,9 @@ body {
   font-size: 2rem;
   font-weight: 600;
   background-color: white;
+  padding-top: 5%;
 }
 .form-inputs-container {
-  border: 5px solid green;
   display: flex;
   flex-wrap: wrap;
   background-color: white;
@@ -92,7 +120,6 @@ input {
   width: 100%;
 }
 .form-inputs-left {
-  border: 5px solid gold;
   display: flex;
   flex-direction: column;
   margin-right: 10%;
@@ -100,7 +127,6 @@ input {
 }
 
 .form-inputs-right {
-  border: 5px solid purple;
   display: flex;
   flex-direction: column;
   width: 40%;
@@ -108,16 +134,17 @@ input {
 
 
 .form-buttons-container {
-  border: 5px solid aqua;
   display: flex;
   flex-direction: column;
-  padding: 6%;
+  padding-top: 5%;
+  padding-bottom: 10%;
+  padding-left:9.5%;
 }
 
 .form-buttons-container > button {
   background-color: var(--form-account-button-color);
   color: white;
-  width: 30%;
+  width: 200px;
   padding: 10px;
   border: none;
   border-radius: 4px;
@@ -136,4 +163,9 @@ input {
 }
 .login-link:hover {
   color: #1c2217;
+}
+
+.error {
+  color: red;
+  border: 1px solid red;
 }
