@@ -7,6 +7,7 @@
   --input-default-border: 1px solid #E5E7EB;
   --form-content-left-padding: 7%;
   --form-content-right-padding: 12%;
+  --default-box-shadow: 0px 5px 5px darkgray;
 }
 @font-face {
   font-family: 'norsebold';
@@ -80,7 +81,9 @@ body {
   color: var(--form-account-button-color);
   text-decoration: none;
 }
-
+.hero-footer > span > a:hover{ 
+  color: lightblue;
+}
 
 
 
@@ -106,6 +109,7 @@ body {
   flex-wrap: wrap;
   background-color: white;
   padding-top: 2%;
+  box-shadow: var(--default-box-shadow);
 }
 label {
   text-transform: uppercase;
@@ -118,6 +122,9 @@ label {
 input {
   padding: 8px;
   width: 100%;
+}
+input:focus {
+  box-shadow: var(--default-box-shadow);
 }
 .form-inputs-left {
   display: flex;
@@ -150,6 +157,7 @@ input {
   border-radius: 4px;
   margin-bottom: 5%;
   cursor: pointer;
+  box-shadow: var(--default-box-shadow);
 }
 .form-buttons-container > button:hover {
   background-color: #1c2217;
